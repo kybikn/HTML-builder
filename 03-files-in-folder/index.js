@@ -30,7 +30,7 @@ async function filesInFolder() {
     // получение размера файла из статистики
     const size = stat.size;
     // вывод в консоль отдельно название файла, расширение и размер
-    console.log(shortName + " - " + shortExtention + " - " + size);
+    console.log(shortName + " - " + shortExtention + " - " + size + "b");
   }
 }
 filesInFolder();
