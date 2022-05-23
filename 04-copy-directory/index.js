@@ -10,17 +10,17 @@ async function copyDir() {
   //удаление старой папки files-copy, если была ранее
   try {
     await fsPromises.rm(copyPath, { recursive: true });
-    console.log("files-copy deleted");
+    // console.log("files-copy deleted");
   } catch {
-    console.log("files-copy not deleted(not exist)");
+    // console.log("files-copy not deleted(not exist)");
   }
 
   // создание папки files-copy
   try {
     await fsPromises.mkdir(copyPath, { recursive: true });
-    console.log("files-copy created");
+    // console.log("files-copy created");
   } catch {
-    console.log("files-copy not created");
+    // console.log("files-copy not created");
   }
 
   // получение (чтение) списка файлов и папок (массив)
@@ -42,9 +42,9 @@ async function copyDir() {
     // копирование каждого отдельного файла
     try {
       await fsPromises.copyFile(fullPathToFile, fullPathToFileCopy);
-      console.log("file was copied to files-copy");
+      // console.log("file was copied to files-copy");
     } catch {
-      console.log("The file could not be copied");
+      // console.log("The file could not be copied");
     }
   }
 }
